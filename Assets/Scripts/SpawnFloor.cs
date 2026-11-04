@@ -13,6 +13,11 @@ public class SpawnFloor : MonoBehaviour
 
     List<GameObject> spawnedTiles = new List<GameObject>(); // list to keep track of all floor tiles currently alive
 
+    private void Start()
+    {
+        SpawnTile();
+    }
+
     void SpawnTile()
     {
         GameObject temp = Instantiate(floorObj, spawnPosition) as GameObject; // spawn a tile and add it to temporary variable for initialisation
