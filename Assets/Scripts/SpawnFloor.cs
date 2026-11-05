@@ -11,13 +11,9 @@ public class SpawnFloor : MonoBehaviour
     public Vector3 spawnScale;
     public Vector3 BboxScale;
 
+    private bool safety = false;
+
     List<GameObject> spawnedTiles = new List<GameObject>(); // list to keep track of all floor tiles currently alive
-
-    private void Start()
-    {
-        SpawnTile();
-    }
-
     void SpawnTile()
     {
         GameObject temp = Instantiate(floorObj, spawnPosition) as GameObject; // spawn a tile and add it to temporary variable for initialisation
@@ -27,12 +23,19 @@ public class SpawnFloor : MonoBehaviour
         spawnedTiles.Add(temp);
     }
 
-    void checkSafety()
+    private void CheckSafety()
     {
-        /*
-         * Add code here for checking if the spanwers colider is not intersecting with any floors
-         * if it is empty (no intersections) spawn a tile
-         * if there is an intersection wait until there isnt 
-         */
+        if (Physics.Raycast(transform.position, Vector3.back, out RaycastHit hit, transform.localScale.z / 2))
+        {
+            if (hit.collider.gameObject.tag == "floor")
+            {
+                safety = false;
+            }
+        }
+        else
+        {
+            safety = true;
+        }
+
     }
 }

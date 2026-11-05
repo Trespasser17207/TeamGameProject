@@ -7,6 +7,7 @@ TagManager:
   - Pouch
   - Pickup
   - floor
+  - FloorKiller
   layers:
   - Default
   - TransparentFX

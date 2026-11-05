@@ -9,4 +9,20 @@ public class MoveFloor : MonoBehaviour
     {
         transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.tag == "FloorKiller")
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void Update()
+    {
+        if (transform.position.x < -15)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
+
