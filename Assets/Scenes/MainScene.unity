@@ -669,6 +669,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3112360710209821546, guid: 217d6c0dfb47c604991d02b52663efba, type: 3}
+      propertyPath: BboxScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3112360710209821546, guid: 217d6c0dfb47c604991d02b52663efba, type: 3}
+      propertyPath: BboxScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3112360710209821546, guid: 217d6c0dfb47c604991d02b52663efba, type: 3}
+      propertyPath: BboxScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3112360710209821546, guid: 217d6c0dfb47c604991d02b52663efba, type: 3}
       propertyPath: spawnScale.x
       value: 0.3
       objectReference: {fileID: 0}
@@ -684,6 +696,10 @@ PrefabInstance:
       propertyPath: spawnPosition
       value: 
       objectReference: {fileID: 1374030020}
+    - target: {fileID: -3112360710209821546, guid: 217d6c0dfb47c604991d02b52663efba, type: 3}
+      propertyPath: floorLayerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5660673708338842794, guid: 217d6c0dfb47c604991d02b52663efba, type: 3}
       propertyPath: m_Name
       value: FloorSpawner

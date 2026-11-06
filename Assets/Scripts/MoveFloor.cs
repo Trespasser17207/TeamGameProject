@@ -10,6 +10,7 @@ public class MoveFloor : MonoBehaviour
         transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
     }
 
+<<<<<<< Updated upstream
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.gameObject.tag == "FloorKiller")
@@ -23,6 +24,11 @@ public class MoveFloor : MonoBehaviour
         {
             Destroy(gameObject);
         }
+=======
+    private void Update()
+    {
+        
+>>>>>>> Stashed changes
     }
 }
 
