@@ -13,17 +13,17 @@ public class SpawnFloor : MonoBehaviour
     public LayerMask floorLayerMask;
     private bool safeToSpawn;
 
-    private bool safety = false;
-
-<<<<<<< Updated upstream
+    private bool safety = true;
     List<GameObject> spawnedTiles = new List<GameObject>(); // list to keep track of all floor tiles currently alive
-=======
-    private void Start()
-    {
-        SpawnTile();
-    }
 
->>>>>>> Stashed changes
+    private void Update()
+    {
+        CheckSafety();
+        if (safety) 
+        {
+            SpawnTile();
+        }
+    }
     void SpawnTile()
     {
         GameObject temp = Instantiate(floorObj, spawnPosition) as GameObject; // spawn a tile and add it to temporary variable for initialisation
@@ -32,11 +32,10 @@ public class SpawnFloor : MonoBehaviour
 
         spawnedTiles.Add(temp);
     }
-<<<<<<< Updated upstream
 
     private void CheckSafety()
     {
-        if (Physics.Raycast(transform.position, Vector3.back, out RaycastHit hit, transform.localScale.z / 2))
+        if (Physics.Raycast(transform.position, Vector3.back, out RaycastHit hit, transform.localScale.z))
         {
             if (hit.collider.gameObject.tag == "floor")
             {
@@ -49,6 +48,4 @@ public class SpawnFloor : MonoBehaviour
         }
 
     }
-=======
->>>>>>> Stashed changes
 }
