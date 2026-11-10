@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 2f))
         {
             // checks if the ray is hitting the floor or not
-            if (hit.collider.gameObject.tag == "floor" && rb.linearVelocity.y == 0)
+            if (hit.collider.gameObject.tag == "floor")
             {
                 onFloor = true;
             }

@@ -72,8 +72,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cone
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f0339697aec2f924f872cba8b15f87ef, type: 3}
+      propertyPath: m_TagString
+      value: Object
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f0339697aec2f924f872cba8b15f87ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5566535559297754546}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f0339697aec2f924f872cba8b15f87ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8555427352019537721}
   m_SourcePrefab: {fileID: 100100000, guid: f0339697aec2f924f872cba8b15f87ef, type: 3}
+--- !u!1 &1942573250282673076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f0339697aec2f924f872cba8b15f87ef, type: 3}
+  m_PrefabInstance: {fileID: 1599905716754935525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5566535559297754546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942573250282673076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dff21f94a6796941a98dd618a1c2874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveObject
+  speed: 14
+--- !u!65 &8555427352019537721
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942573250282673076}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.26113814}
+  m_Center: {x: -1.4964994e-16, y: 0, z: 0.12056907}

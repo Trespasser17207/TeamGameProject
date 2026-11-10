@@ -8,6 +8,7 @@ TagManager:
   - Pickup
   - floor
   - FloorKiller
+  - Object
   layers:
   - Default
   - TransparentFX

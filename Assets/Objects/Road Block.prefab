@@ -68,8 +68,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road Block
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1d2c4fb83d5fe3e4697541f09fbf499c, type: 3}
+      propertyPath: m_TagString
+      value: Object
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1d2c4fb83d5fe3e4697541f09fbf499c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5683245361480493007}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1d2c4fb83d5fe3e4697541f09fbf499c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1040604313646894179}
   m_SourcePrefab: {fileID: 100100000, guid: 1d2c4fb83d5fe3e4697541f09fbf499c, type: 3}
+--- !u!1 &4040347421124551673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1d2c4fb83d5fe3e4697541f09fbf499c, type: 3}
+  m_PrefabInstance: {fileID: 3806486454474268328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5683245361480493007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4040347421124551673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dff21f94a6796941a98dd618a1c2874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveObject
+  speed: 7
+--- !u!65 &-1040604313646894179
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4040347421124551673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.24000004, y: 0.033105955, z: 0.02542785}
+  m_Center: {x: -0.000000013038701, y: -0.0034470654, z: 0.012713921}
