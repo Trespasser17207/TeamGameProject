@@ -8,6 +8,7 @@ TagManager:
   - Pickup
   - floor
   - FloorKiller
+  - coins
   layers:
   - Default
   - TransparentFX

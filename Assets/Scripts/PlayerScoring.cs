@@ -22,4 +22,14 @@ public class PlayerScoring : MonoBehaviour
             timer = time;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "coins")
+        {
+            Debug.LogWarning("Obtained coin");
+            score += 50;
+            Destroy(other.gameObject);
+        }
+    }
 }
