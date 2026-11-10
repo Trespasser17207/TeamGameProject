@@ -8,7 +8,11 @@ TagManager:
   - Pickup
   - floor
   - FloorKiller
+<<<<<<< HEAD
   - Object
+=======
+  - coins
+>>>>>>> 605a896a7debc1622af9d39b120701e2925adff0
   layers:
   - Default
   - TransparentFX
