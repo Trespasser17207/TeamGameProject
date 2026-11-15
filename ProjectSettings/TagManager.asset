@@ -3,16 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Pouch
-  - Pickup
-  - floor
-  - FloorKiller
-<<<<<<< HEAD
-  - Object
-=======
-  - coins
->>>>>>> 605a896a7debc1622af9d39b120701e2925adff0
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -20,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Floor
   - 
-  - Pickable
+  - 
+  - 
   - 
   - 
   - 
@@ -52,11 +43,4 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
-  - Light Layer 1
-  - Light Layer 2
-  - Light Layer 3
-  - Light Layer 4
-  - Light Layer 5
-  - Light Layer 6
-  - Light Layer 7
   m_MigratedRenderPipelines: []
