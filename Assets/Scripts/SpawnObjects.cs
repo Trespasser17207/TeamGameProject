@@ -2,14 +2,17 @@ using NUnit.Framework;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
 
 public class SpawnObjects : MonoBehaviour
 {
     public GameObject roadblock;
     public GameObject cone;
     public GameObject cluster;
+    public GameObject coin;
 
     public Transform spawnPos;
+    public Transform coinSpawnPos;
     public Transform clusterPos;
     public float maxRandomTime;
     public float minRandomTime;
@@ -33,6 +36,11 @@ public class SpawnObjects : MonoBehaviour
     {
         if (spawnTimer > decidedMaxTime) 
         {
+            int chance = Random.Range(1, 6);
+            if (chance < 3)
+            {
+                SpawnCoin();
+            }
             spawnTimer = 0f;
             SpawnObject();
         }
@@ -63,6 +71,14 @@ public class SpawnObjects : MonoBehaviour
             temp.transform.position = spawnPos.position;
             spawnedObjects.Add(temp);
         }
+        decidedMaxTime = Random.Range(minRandomTime, maxRandomTime);
+    }
+
+
+    void SpawnCoin()
+    {
+        GameObject coinTemp = Instantiate(coin) as GameObject;
+        coinTemp.transform.position = coinSpawnPos.position;
     }
 }
 

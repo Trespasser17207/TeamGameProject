@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &102242443722148953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1976885847293874664}
+  m_Layer: 0
+  m_Name: CoinSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1976885847293874664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102242443722148953}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7154095792670741056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1516949691637188470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7935858321726407275}
+  m_Layer: 0
+  m_Name: ObjectSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7935858321726407275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516949691637188470}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7154095792670741056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5660673708338842794
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7154095792670741056}
   - component: {fileID: -3112360710209821546}
+  - component: {fileID: 3308846111411269528}
   m_Layer: 0
   m_Name: FloorSpawner
   m_TagString: Untagged
@@ -26,10 +89,12 @@ Transform:
   m_GameObject: {fileID: 5660673708338842794}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.63, y: 1, z: -3.19}
+  m_LocalPosition: {x: 35, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7935858321726407275}
+  - {fileID: 1976885847293874664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-3112360710209821546
@@ -45,3 +110,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   floorObj: {fileID: 853412140964511067, guid: b12f30ac8048a0c46a83d3377f3319c9, type: 3}
+  spawnPosition: {fileID: 7154095792670741056}
+  spawnScale: {x: 1, y: 1, z: 1}
+  BboxScale: {x: 0, y: 0, z: 0}
+  floorLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  timeToSpawn: 0.5
+--- !u!114 &3308846111411269528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660673708338842794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf70dbcb85e97d4da08c2551f144589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnObjects
+  roadblock: {fileID: 1942573250282673076, guid: a0d911d71f1abe34da76d23c91502a8a, type: 3}
+  cone: {fileID: 4040347421124551673, guid: 63928bc8305f5c7439b66d014c6e6e63, type: 3}
+  cluster: {fileID: 498504511805903891, guid: 0c102f0f231d5f049a675e39d54e95e3, type: 3}
+  coin: {fileID: 63871134404147422, guid: b8ac0924df41a6d42a3088943c6cf21c, type: 3}
+  spawnPos: {fileID: 7935858321726407275}
+  coinSpawnPos: {fileID: 1976885847293874664}
+  clusterPos: {fileID: 7935858321726407275}
+  maxRandomTime: 3
+  minRandomTime: 5
