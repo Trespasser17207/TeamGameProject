@@ -6,6 +6,6 @@ public class MoveObject : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
+        transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime; // move object on x axis over time
     }
 }

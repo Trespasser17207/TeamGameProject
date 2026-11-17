@@ -6,38 +6,37 @@ using Unity.VisualScripting;
 
 public class SpawnFloor : MonoBehaviour
 {
-    public GameObject floorObj;
-    public Transform spawnPosition;
-    public Vector3 spawnScale;
-    public Vector3 BboxScale;
-    public LayerMask floorLayerMask;
-    public float timeToSpawn;
+    public GameObject floorObj; // game object ref for the floor object
+    public Transform spawnPosition; // spawn position for floors
+    public Vector3 spawnScale; // spawn scale (not needed)
+    public Vector3 BboxScale; // collision scale (not needed)
+    public LayerMask floorLayerMask; // floor layer reference (not needed)
+    public float timeToSpawn; // time for the floors to spawn
 
-    private float timer;
-    private bool safety = true;
+    private float timer; // timer 
     List<GameObject> spawnedTiles = new List<GameObject>(); // list to keep track of all floor tiles currently alive
 
 
     private void Update()
     {
-        if (timer > timeToSpawn)
+        if (timer > timeToSpawn) // if the timer exceeds the time to spawn
         {
-            timer = 0;
-            SpawnTile();
+            timer = 0; // reset timer
+            SpawnTile(); // spawn the tile
         }
-        else
+        else // if timer doesnt exceed time to spawn
         {
-            timer += Time.deltaTime;
+            timer += Time.deltaTime; // add 0.01 to timer
         }
     }
 
-    void SpawnTile()
+    void SpawnTile() // function to spawn floor tile
     {
         GameObject temp = Instantiate(floorObj, spawnPosition) as GameObject; // spawn a tile and add it to temporary variable for initialisation
         temp.transform.position = spawnPosition.position; // initialise position
         temp.transform.localScale = spawnScale; // initialise scale
 
-        spawnedTiles.Add(temp);
+        spawnedTiles.Add(temp); // add floor tile to list
     }
 
     
