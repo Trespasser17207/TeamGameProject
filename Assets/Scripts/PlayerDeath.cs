@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.gameObject.tag == "Object") // if hostile object collides with player
         {
+            SceneManager.LoadScene("DeathScreen");
             Destroy(gameObject); // destroy player
         }
     }
