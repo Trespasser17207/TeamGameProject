@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dff21f94a6796941a98dd618a1c2874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObject
-  speed: 14
+  speed: 10
 --- !u!65 &8555427352019537721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124,5 +124,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.020000005, z: 0.26113814}
-  m_Center: {x: -1.4964994e-16, y: 0, z: 0.12056907}
+  m_Size: {x: 0.033898607, y: 0.04138882, z: 0.26113814}
+  m_Center: {x: 0.0003829638, y: -0.00068881107, z: 0.120569065}
